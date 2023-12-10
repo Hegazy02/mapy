@@ -16,4 +16,9 @@ class Styles {
       fontSize: 18.sp,
       color: MyColors.primaryColor,
       fontWeight: FontWeight.w300);
+  static TextStyle style20Whitew700 = TextStyle(
+    fontSize: 20.sp,
+    fontWeight: FontWeight.bold,
+    color: Colors.white,
+  );
 }

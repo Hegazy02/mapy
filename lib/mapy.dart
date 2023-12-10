@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:mapy/core/routing/app_router.dart';
 import 'package:mapy/core/routing/routes.dart';
+import 'package:mapy/core/theme/colors.dart';
 
 class Mapy extends StatelessWidget {
   const Mapy({super.key});
@@ -14,7 +15,7 @@ class Mapy extends StatelessWidget {
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
         theme: ThemeData(
-          colorScheme: ColorScheme.fromSeed(seedColor: Colors.black),
+          colorScheme: ColorScheme.fromSeed(seedColor: MyColors.primaryColor),
           useMaterial3: true,
         ),
         initialRoute: Routes.loginView,

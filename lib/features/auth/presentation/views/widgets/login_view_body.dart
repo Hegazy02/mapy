@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:mapy/core/helpers/extentions.dart';
 import 'package:mapy/core/theme/styles.dart';
+import 'package:mapy/core/widgets/custom_button.dart';
+import 'package:mapy/features/auth/data/services/validation.dart';
+import 'package:mapy/features/auth/presentation/views/widgets/custom_textField.dart';
 
 class LoginViewBody extends StatefulWidget {
   const LoginViewBody({super.key});
@@ -10,8 +14,14 @@ class LoginViewBody extends StatefulWidget {
 }
 
 class _LoginViewBodyState extends State<LoginViewBody> {
-  bool rememberMe = false;
-  bool isHiddeng = true;
+  String? phoneNumber;
+  GlobalKey<FormState> key = GlobalKey<FormState>();
+  validation() {
+    if (key.currentState!.validate()) {
+      context.pushNamed("routeName");
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
@@ -36,7 +46,47 @@ class _LoginViewBodyState extends State<LoginViewBody> {
           height: 40.h,
         ),
         Row(
-          children: [],
+          children: [
+            SizedBox(
+              width: 10.w,
+            ),
+            Text(
+              "🇪🇬 +20",
+              style: Styles.style18PrimaryColorw300,
+            ),
+            SizedBox(
+              width: 40.w,
+            ),
+            Form(
+              key: key,
+              child: Expanded(
+                child: CutomTextField(
+                  keyboardType: TextInputType.number,
+                  onChanged: (value) {
+                    phoneNumber = value;
+                  },
+                  validator: (val) {
+                    return ValidationService.validateMobile(val);
+                  },
+                ),
+              ),
+            )
+          ],
+        ),
+        SizedBox(
+          height: 40.h,
+        ),
+        Align(
+          alignment: Alignment.centerRight,
+          child: SizedBox(
+            width: 0.3.sw,
+            child: CustomButton(
+              text: "Next",
+              onPressed: () {
+                validation();
+              },
+            ),
+          ),
         )
       ]),
     ));
