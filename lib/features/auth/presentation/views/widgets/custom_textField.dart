@@ -30,14 +30,14 @@ class CutomTextField extends StatelessWidget {
               ? null
               : IconButton(onPressed: onIconPressed, icon: Icon(iconData)),
           hintText: hintText,
-          hintStyle: Styles.style12Grey4w500,
-          enabledBorder: customBorder(MyColors.lightGrey),
+          hintStyle: Styles.style12PrimaryColorw400,
+          enabledBorder: customBorder(MyColors.primaryColor),
           focusedBorder: customBorder(MyColors.primaryColor),
           errorBorder: customBorder(MyColors.red),
           focusedErrorBorder: customBorder(MyColors.red),
         ),
         onChanged: onChanged,
-        style: Styles.style12darkBluew500,
+        style: Styles.style12PrimaryColorw400,
       ),
     );
   }

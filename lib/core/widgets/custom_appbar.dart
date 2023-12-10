@@ -39,8 +39,8 @@ class CustomAppBar extends StatelessWidget {
           child: Text(
             title,
             style: isBackButtonExists
-                ? Styles.style16Wihtew700
-                : Styles.style16Wihtew700,
+                ? Styles.style12PrimaryColorw400
+                : Styles.style12PrimaryColorw400,
           ),
         ),
       ),
