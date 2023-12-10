@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "176674699675",
+    "project_id": "mapy-177be",
+    "storage_bucket": "mapy-177be.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:176674699675:android:e34a82fb64ce11cfc0c93e",
+        "android_client_info": {
+          "package_name": "com.example.mapy"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA1Jc34PTdZw3KKPj3XTO-nd3Jo0iEsMxE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
