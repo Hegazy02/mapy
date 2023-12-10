@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:mapy/core/routing/app_router.dart';
 import 'package:mapy/core/routing/routes.dart';
 
@@ -7,13 +8,18 @@ class Mapy extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.black),
-        useMaterial3: true,
+    return ScreenUtilInit(
+      designSize: const Size(375, 812),
+      minTextAdapt: true,
+      child: MaterialApp(
+        debugShowCheckedModeBanner: false,
+        theme: ThemeData(
+          colorScheme: ColorScheme.fromSeed(seedColor: Colors.black),
+          useMaterial3: true,
+        ),
+        initialRoute: Routes.loginView,
+        onGenerateRoute: AppRouter.generateRoute,
       ),
-      initialRoute: Routes.loginView,
-      onGenerateRoute: AppRouter.generateRoute,
     );
   }
 }
