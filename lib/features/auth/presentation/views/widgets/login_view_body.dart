@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:mapy/core/helpers/extentions.dart';
+import 'package:mapy/core/routing/routes.dart';
 import 'package:mapy/core/theme/styles.dart';
 import 'package:mapy/core/widgets/custom_button.dart';
 import 'package:mapy/features/auth/data/services/validation.dart';
@@ -18,7 +19,7 @@ class _LoginViewBodyState extends State<LoginViewBody> {
   GlobalKey<FormState> key = GlobalKey<FormState>();
   validation() {
     if (key.currentState!.validate()) {
-      context.pushNamed("routeName");
+      context.pushNamed(Routes.otpView, arguments: phoneNumber);
     }
   }
 
@@ -51,7 +52,7 @@ class _LoginViewBodyState extends State<LoginViewBody> {
               width: 10.w,
             ),
             Text(
-              "🇪🇬 +20",
+              "🇪🇬 +2",
               style: Styles.style18PrimaryColorw300,
             ),
             SizedBox(

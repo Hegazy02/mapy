@@ -21,4 +21,6 @@ class Styles {
     fontWeight: FontWeight.bold,
     color: Colors.white,
   );
+  static TextStyle style18bluew300 = TextStyle(
+      fontSize: 18.sp, color: MyColors.blue, fontWeight: FontWeight.w300);
 }
